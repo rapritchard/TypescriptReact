@@ -59,7 +59,7 @@ const PatientInfoPage: React.FC = () => {
     {
       patient !== undefined
       ? (
-        <Container textAlign="left" >
+        <Container textAlign="left">
           <Header as="h1">
             {patient.name} <Icon {...genderIcons[patient.gender]} />
           </Header> 

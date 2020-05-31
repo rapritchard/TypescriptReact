@@ -29,8 +29,8 @@ const OccupationalHealthcareEntry: React.FC<{ entry: OccupationalHealthcare }> =
           </Table.Header>
           <Table.Body>
             <Table.Row>
-              <Table.Cell>{entry.sickLeave.startDate}</Table.Cell>
-              <Table.Cell>{entry.sickLeave.endDate}</Table.Cell>
+              <Table.Cell negative>{entry.sickLeave.startDate}</Table.Cell>
+              <Table.Cell positive>{entry.sickLeave.endDate}</Table.Cell>
             </Table.Row>
           </Table.Body>
         </Table>

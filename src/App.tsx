@@ -45,7 +45,7 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <Router>
-        <Container>
+        <Container style={{ marginTop: '3em', marginBottom: '3em' }}>
           <Header as="h1">Patientor</Header>
           <Button as={Link} to="/" primary>
             Home
