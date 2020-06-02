@@ -3,14 +3,13 @@ import axios from "axios";
 import { Container, Header, Icon, Loader, Button, Divider } from "semantic-ui-react";
 
 import { apiBaseUrl } from "../constants";
-import { Patient } from "../types";
+import { Patient, EntryFormValues } from "../types";
 import { toPatient } from "../utils";
 import { useStateValue, updatePatient } from "../state";
 import { useParams } from "react-router-dom";
 
 import EntryDetails from "./EntryDetails";
 import AddEntryModal from "../AddEntryModal";
-import { EntryFormValues } from "../AddEntryModal/AddEntryForm";
 
 const genderIcons = {
   male: { name: "mars" as "mars" },

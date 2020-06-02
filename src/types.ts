@@ -33,8 +33,9 @@ export enum Gender {
   Other = "other"
 }
 
-interface BaseEntry {
+export interface BaseEntry {
   id: string;
+  type: EntryType;
   description: string;
   date: string;
   specialist: string;
@@ -61,6 +62,15 @@ export type Entry =
  | HealthCheckEntry
  | HospitalEntry
  | OccupationalHealthcareEntry;
+
+/* eslint-disable-next-line @typescript-eslint/no-explicit-any */
+type DistributiveOmit<T, K extends keyof any> = T extends any
+? Omit<T, K>
+: never;
+
+export type NewBaseEntry = Omit<BaseEntry, 'id'>;
+
+export type EntryFormValues = DistributiveOmit<Entry, 'id'>;
 
 export interface Patient {
   id: string;
